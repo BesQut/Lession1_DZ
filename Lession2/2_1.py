@@ -5,9 +5,15 @@
 
 n = int(input('Колличество монеток: '))
 count = 0
+count_zero = 0
 
 for i in range(n):
     m = int(input('положение монетки: '))
     if m == 0:
+        count_zero += 1
+    else:
         count += 1
-print(f'Колличество монеток которых нужно перевернуть: {count}')
+if count > count_zero:
+    print(f'Колличество монеток которых нужно перевернуть: {count_zero}')
+else:
+    print(f'Колличество монеток которых нужно перевернуть: {count}')
