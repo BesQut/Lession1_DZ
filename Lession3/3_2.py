@@ -5,10 +5,14 @@
 x = int(input('Число, колличество которого нужно найти: '))
 n = list(map(int,input().split()))
 
+# for i in range(1, len(n)):
+#     if n[i] == x:
+#         print(n[i-1])
+#         break
+#     elif n[i] > x and n[i-1] < x:
+#         print(n[i-1])
+#         break
 for i in range(1, len(n)):
-    if n[i] == x:
-        print(n[i-1])
-        break
-    elif n[i] > x and n[i-1] < x:
+    if n[i] >= x:
         print(n[i-1])
         break

@@ -4,5 +4,5 @@
 
 x = input('Число, колличество которого нужно найти: ')
 list_n = ' '.join(input().split())
-print(sum(x == list_n[i]for i in range(len(list_n))))
+print(sum(x == list_n[i] for i in range(len(list_n))))
 
