@@ -2,10 +2,13 @@
 # Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. В последующих  строках записаны N целых чисел Ai. 
 # Последняя строка содержит число X
 
-x = input('Число, колличество которого нужно найти: ')
-list_n = ' '.join(input().split())
+x = int(input('Число, колличество которого нужно найти: '))
+n = list(map(int,input().split()))
 
-for i in range(1, len(list_n)):
-    if list_n[i-1] < list_n[i] and list_n[i] == x:
-        print(list_n[i-1])
+for i in range(1, len(n)):
+    if n[i] == x:
+        print(n[i-1])
+        break
+    elif n[i] > x and n[i-1] < x:
+        print(n[i-1])
         break
