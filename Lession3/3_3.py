@@ -19,5 +19,9 @@
 
 
 list_n = ' '.join(input().upper())
-print(list_n)
+list_dict = [{"H": "1"}, {"E": "1"},
+             {"L": "1"}, {"O": "1"},]
+
+for i in range(len(list_n)):
+    
 
