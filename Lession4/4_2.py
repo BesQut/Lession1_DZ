@@ -12,8 +12,15 @@
 # собрать за один заход собирающий модуль, находясь перед некоторым кустом
 # заданной во входном файле грядки.
 
-# from random import randint
+from random import randint
 
-# n = int(input('Колличество грядок: '))
-
-# list_n = [randint(1, n) for _ in range(n)]
+n = int(input('Колличество грядок: '))
+list_n = [randint(1, 10) for _ in range(n)]
+print(list_n)
+m = 0
+for i in range(len(list_n)):
+    if list_n[i] != list_n[-1]:
+        m = max(m, list_n[i-1] + list_n[i] + list_n[i+1])
+    else:
+        m = max(m, list_n[i-1] + list_n[i] + list_n[0])
+print(m)
