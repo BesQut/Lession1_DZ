@@ -1,11 +1,12 @@
 # Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
 
-# def nums(m, n):
-#     if m == 0:
-#         return n
-#     return nums(m-1, n+1)
+def Step(a,b):
+    if b == 0:
+        return 1
+    if b < 0:
+        return Step(a, b+1) * 1 / a
+    return Step(a, b - 1) * a
 
-# n, m = int(input()), int(input())
-# print(nums(m, n))
-
+a, b = int(input()), int(input())
+print(Step(a,b))
 
